@@ -1,5 +1,12 @@
 <!doctype html>
 <html lang="{{ .Site.Params.languageTag | default "en-US" }}">
+{{ if and .IsHome }}
+<head>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="refresh" content="0; url={{ "/docs/prologue/introduction/" }}"/>
+</head>
+{{ else }}
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
@@ -30,3 +37,4 @@
     {{ end }}
   </body>
 </html>
+{{ end }}
