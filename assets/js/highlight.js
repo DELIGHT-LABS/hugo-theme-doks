@@ -11,6 +11,7 @@ import python from 'highlight.js/lib/languages/python';
 import go from 'highlight.js/lib/languages/go';
 import rust from 'highlight.js/lib/languages/rust';
 import typescript from 'highlight.js/lib/languages/typescript';
+import protobuf from 'highlight.js/lib/languages/protobuf';
 
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('json', json);
@@ -24,6 +25,7 @@ hljs.registerLanguage('python', python);
 hljs.registerLanguage('go', go);
 hljs.registerLanguage('rust', rust);
 hljs.registerLanguage('typescript', typescript);
+hljs.registerLanguage('protobuf', protobuf);
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('pre code:not(.language-mermaid)').forEach((block) => {
